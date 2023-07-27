@@ -44,7 +44,6 @@ h6 {
      isolation: isolate;
 }
 
-
 :root {
      --magenta: hsl(300, 43%, 22%);
      --dk-grey-magenta: hsl(303, 10%, 53%);
@@ -53,11 +52,9 @@ h6 {
      --white: hsl(0, 0%, 100%);
 }
 
-
 body {
      font-family: 'League Spartan', sans-serif;
 }
-
 
 h1,
 h2,
@@ -71,8 +68,11 @@ h1 {
      color: var(--magenta);
      text-align: center;
      margin-block-end: 2rem;
+     font-weight: 700;
 }
 
+
+/* -- WRAPPER ----------------------------------- */
 
 .wrapper {
      width: 90%;
@@ -85,6 +85,9 @@ header {
      font-size: 1rem;
 }
 
+
+/* -- RATINGS ----------------------------------- */
+
 .ratingcard {
      background-color: var(--lt-grey-magenta);
      border-radius: .75rem;
@@ -93,7 +96,6 @@ header {
      text-align: center;
      font-weight: 700;
      color: var(--magenta);
-
 }
 
 .ratingcard p {
@@ -107,6 +109,7 @@ header {
      margin-inline: auto;
 }
 
+/* -- REVIEWS ----------------------------------- */
 
 .reviews .card {
      background-color: var(--magenta);
@@ -138,3 +141,114 @@ header {
      width: 3rem;
 
 }
+
+
+/* -- media queries ----------------------------------- */
+
+@media (min-width: 768px) {
+
+     .wrapper {
+          display: grid;
+          grid-gap: 1rem;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+          grid-template-areas: "header ratings"
+               "reviews reviews";
+
+          max-width: 70rem;
+     }
+
+     header {
+          grid-column-start: 1;
+          grid-column-end: 2;
+          grid-row-start: 1;
+          grid-row-end: 2;
+          text-align: left;
+          padding: 2rem;
+          width: 80%;
+          /* outline: 1px dotted red; */
+     }
+
+     header h1 {
+          font-size: 3rem;
+          text-align: left;
+          font-weight: 800;
+          letter-spacing: -.1rem;
+     }
+
+
+
+
+     .ratings {
+          grid-row: 1 / 2;
+          grid-column: 2 / 3;
+
+     }
+
+     .ratings .ratingcard {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          width: 60%;
+
+     }
+
+     .ratingcard .stars {
+          display: flex;
+          align-items: center;
+          justify-items: start;
+          justify-content: flex-start;
+          width: unset;
+
+          margin-inline: unset;
+
+
+          /* outline: 1px dotted blue; */
+     }
+
+
+     .ratings .ratingcard p {
+          justify-content: flex-start;
+
+          /* outline: 1px dotted red; */
+     }
+
+     .ratings .ratingcard:nth-child(2) {
+          margin-left: 2rem;
+     }
+
+     .ratings .ratingcard:nth-child(3) {
+          margin-left: 4rem;
+     }
+
+
+
+     .reviews {
+          grid-column-start: 1;
+          grid-column-end: 3;
+
+          grid-row-start: 2;
+          grid-row-end: 3;
+
+
+          display: flex;
+          gap: 2rem;
+
+          align-items: start;
+
+
+          /* outline: 1px dotted blue; */
+     }
+
+     .reviews .card:nth-child(2) {
+          margin-top: 2rem;
+     }
+
+     .reviews .card:nth-child(3) {
+          margin-top: 4rem;
+     }
+
+
+}
+
+/* @media */
