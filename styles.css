@@ -47,8 +47,94 @@ h6 {
 
 :root {
      --magenta: hsl(300, 43%, 22%);
-     --dk-grey-agenta: hsl(303, 10%, 53%);
-     --lt-grey-agenta: hsl(300, 24%, 96%);
+     --dk-grey-magenta: hsl(303, 10%, 53%);
+     --lt-grey-magenta: hsl(300, 24%, 96%);
      --pink: hsl(333, 80%, 67%);
      --white: hsl(0, 0%, 100%);
+}
+
+
+body {
+     font-family: 'League Spartan', sans-serif;
+}
+
+
+h1,
+h2,
+h3 {
+     font-weight: 700;
+}
+
+h1 {
+     font-size: 2.5rem;
+     line-height: .8;
+     color: var(--magenta);
+     text-align: center;
+     margin-block-end: 2rem;
+}
+
+
+.wrapper {
+     width: 90%;
+     margin-inline: auto;
+     margin-block: 5rem;
+}
+
+header {
+     color: var(--magenta);
+     font-size: 1rem;
+}
+
+.ratingcard {
+     background-color: var(--lt-grey-magenta);
+     border-radius: .75rem;
+     padding: 1rem;
+     margin-block: 1rem;
+     text-align: center;
+     font-weight: 700;
+     color: var(--magenta);
+
+}
+
+.ratingcard p {
+     margin-block-start: .5rem;
+}
+
+.ratingcard .stars {
+     display: flex;
+     justify-content: space-between;
+     width: 60%;
+     margin-inline: auto;
+}
+
+
+.reviews .card {
+     background-color: var(--magenta);
+     border-radius: .75rem;
+     padding: 2rem;
+     color: var(--lt-grey-magenta);
+     margin-block: 0 2rem;
+}
+
+.card .card-header {
+     display: flex;
+     justify-content: start;
+     gap: .5rem;
+     align-items: center;
+     margin-block: 0 1.5rem;
+}
+
+.reviews .card h2 {
+     font-size: 1.125rem;
+}
+
+.reviews .card h3 {
+     font-size: .9rem;
+     color: var(--pink);
+}
+
+.reviews .card img {
+     border-radius: 9999px;
+     width: 3rem;
+
 }
